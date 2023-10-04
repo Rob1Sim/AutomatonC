@@ -1,0 +1,74 @@
+\hypertarget{Automate_8c}{}\doxysection{Automate.\+c File Reference}
+\label{Automate_8c}\index{Automate.c@{Automate.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}State.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Transition.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Automate_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{structTransition}{Transition}} \mbox{\hyperlink{Automate_8c_acb6a94b09081320f0edb930e6aeaa96c}{find\+Transition}} (\mbox{\hyperlink{structState}{State}} $\ast$state, \mbox{\hyperlink{structTransition}{Transition}} $\ast$transitions, int transition\+Size, char $\ast$letter)
+\begin{DoxyCompactList}\small\item\em Look for a transition in a transition array by a letter and an initial state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Automate_8c_a73e21a7b35d5ec0691267ab30dbba571}{run\+Dfa}} (\mbox{\hyperlink{structState}{State}} $\ast$initial\+State, \mbox{\hyperlink{structTransition}{Transition}} $\ast$transitions, int transition\+Size, char $\ast$word)
+\begin{DoxyCompactList}\small\item\em Verify if a word is recognize by a DFA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Automate_8c_acb6a94b09081320f0edb930e6aeaa96c}\label{Automate_8c_acb6a94b09081320f0edb930e6aeaa96c}} 
+\index{Automate.c@{Automate.c}!findTransition@{findTransition}}
+\index{findTransition@{findTransition}!Automate.c@{Automate.c}}
+\doxysubsubsection{\texorpdfstring{findTransition()}{findTransition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTransition}{Transition}} find\+Transition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structState}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structTransition}{Transition}} $\ast$}]{transitions,  }\item[{int}]{transition\+Size,  }\item[{char $\ast$}]{letter }\end{DoxyParamCaption})}
+
+
+
+Look for a transition in a transition array by a letter and an initial state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The initial state of the transition \\
+\hline
+{\em transitions} & The transition array \\
+\hline
+{\em transition\+Size} & The size of the transition array \\
+\hline
+{\em letter} & The letter of the transition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structState}{State}} ou NULL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Automate_8c_abf9e6b7e6f15df4b525a2e7705ba3089}\label{Automate_8c_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{Automate.c@{Automate.c}!main@{main}}
+\index{main@{main}!Automate.c@{Automate.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Automate_8c_a73e21a7b35d5ec0691267ab30dbba571}\label{Automate_8c_a73e21a7b35d5ec0691267ab30dbba571}} 
+\index{Automate.c@{Automate.c}!runDfa@{runDfa}}
+\index{runDfa@{runDfa}!Automate.c@{Automate.c}}
+\doxysubsubsection{\texorpdfstring{runDfa()}{runDfa()}}
+{\footnotesize\ttfamily void run\+Dfa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structState}{State}} $\ast$}]{initial\+State,  }\item[{\mbox{\hyperlink{structTransition}{Transition}} $\ast$}]{transitions,  }\item[{int}]{transition\+Size,  }\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Verify if a word is recognize by a DFA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+State} & Initial state of the DFA \\
+\hline
+{\em transitions} & Transitions of the DFA \\
+\hline
+{\em transition\+Size} & \mbox{\hyperlink{structTransition}{Transition}} size \\
+\hline
+{\em word} & Word to verify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
